@@ -1,0 +1,7 @@
+:root {
+    --primary-color: hsl(225, 100%, 94%);
+    --secondary-color: hsl(245, 75%, 52%);
+    --terciary-color: hsl(225, 100%, 98%);
+    --quaternary-color: hsl(224, 23%, 55%);
+    --quinary-color: hsl(223, 47%, 23%);
+}
