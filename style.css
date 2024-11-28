@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: hsl(225, 100%, 94%);
+    --secondary-color: hsl(245, 75%, 52%);
+    --terciary-color: hsl(225, 100%, 98%);
+    --quaternary-color: hsl(224, 23%, 55%);
+    --quinary-color: hsl(223, 47%, 23%);
+}
+
+body {
+    font-size: 16px;
+    background-color: var(--primary-color);
+    height: 100vh;
+    font-family: 'Red Hat Display';
+}
+
+.principal {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.card {
+    background-color: white;
+    width: 25%;
+    border-radius: 10px;
+
+    .principal__imagem {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .descricao {
+        text-align: center;
+        margin: 1rem auto;
+
+        .titulo {
+            margin: .5rem 0;
+            font-weight: 900;
+            font-size: 1.3rem;
+        }
+
+        .paragrafo {
+            width: 80%;
+            margin: auto;
+        }
+    }
+
+    .plano {
+        width: 80%;
+        margin: auto;
+        background-color: var(--terciary-color);
+        padding: 1rem;
+        border-radius: 10px;
+        font-size: 14px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+
+        .imagem {
+            border-radius: 100%;
+        }
+
+        .container { 
+            margin-left: 10%;
+
+            .nome {
+                display: block;
+            }
+        }
+
+        .link {
+            color: var(--secondary-color);
+            font-weight: 700;
+
+            &:hover {
+                color: var(--quaternary-color);
+            }
+        }
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1.5rem;
+
+        .continuar {
+            color: var(--terciary-color);
+            width: 80%;
+            background-color: var(--secondary-color);
+            padding: 1rem 0;
+            border-radius: 10px;
+            border: none;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 12px;
+
+            &:hover {
+                background-color: var(--quaternary-color);
+            }
+        }
+
+        .cancelar {
+            background: none;
+            border: none;
+            font-weight: 700;
+            color: var(--quaternary-color);
+            cursor: pointer;
+            margin-bottom: 2rem;
+
+            &:hover {
+                color: var(--quinary-color);
+            }
+        }
+    }
+}
+
+
+@media screen and (width <= 500px) {
+    .card {
+        width: 80%;
+    }
+}
