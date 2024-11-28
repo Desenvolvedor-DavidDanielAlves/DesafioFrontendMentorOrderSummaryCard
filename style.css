@@ -128,7 +128,7 @@ body {
 }
 
 
-@media screen and (width <= 500px) {
+@media screen and (width <= 1024px) {
     .card {
         width: 80%;
     }
